@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				perspective: 1000px;
+			}
+
+			.box {
+				transform-style: preserve-3d;
+				position: relative;
+				margin: 50px auto;
+				width: 800px;
+				height: 800px;
+				transform: rotateX(30deg) rotateY(50deg);
+				animation: x;
+				animation-duration: 5s;
+				animation-timing-function: linear;
+				animation-delay: 2s;
+				animation-iteration-count: infinite;
+			}
+
+			.box .a {
+				background: currentcolor;
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				left: 50%;
+				top: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+				opacity: 0.5;
+			}
+
+			.box .b {
+				background: darkgrey;
+				width: 300px;
+				height: 300px;
+				border: 1px solid;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -150px;
+				margin-top: -150px;
+				opacity: 0.5;
+			}
+
+			.box:hover .a {
+				box-shadow: 0px 0px 10px currentcolor;
+			}
+
+			.box .a1 {
+				color: red;
+				transform: translateZ(50px);
+			}
+
+			.box .a2 {
+				color: green;
+				transform: rotateY(180deg) translateZ(50px);
+			}
+
+			.box .a3 {
+				color: yellow;
+				transform: rotateX(90deg) translateZ(50px);
+			}
+
+			.box .a4 {
+				color: blue;
+				transform: rotateX(-90deg) translateZ(50px);
+			}
+
+			.box .a5 {
+				color: orange;
+				transform: rotateY(90deg) translateZ(50px);
+			}
+
+			.box .a6 {
+				color: pink;
+				transform: rotateY(-90deg) translateZ(50px);
+			}
+
+			.box .b1 {
+				transform: translateZ(150px);
+			}
+
+			.box .b2 {
+				transform: rotateY(180deg) translateZ(150px);
+			}
+
+			.box .b3 {
+				transform: rotateX(90deg) translateZ(150px);
+			}
+
+			.box .b4 {
+				transform: rotateX(-90deg) translateZ(150px);
+			}
+
+			.box .b5 {
+				transform: rotateY(90deg) translateZ(150px);
+			}
+
+			.box .b6 {
+				transform: rotateY(-90deg) translateZ(150px);
+			}
+			.box:hover .b1{
+				transform: translateZ(200px);
+			}
+			.box:hover .b2{
+				transform: translateZ(-200px) rotateY(180deg);
+			}
+			.box:hover .b3{
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			.box:hover .b4{
+				transform:  rotateY(-90deg) translateZ(200px);
+			}
+			.box:hover .b5{
+				transform: rotateX(90deg) translateZ(200px);
+			}
+			.box:hover .b6{
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+
+			@keyframes x {
+				0% {
+					transform: rotateX(0) rotateY(0) rotateZ(0deg);
+				}
+
+				100% {
+					transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="a1 a">
+				<!-- 前 -->
+			</div>
+			<div class="a2 a">
+				<!-- 后 -->
+			</div>
+			<div class="a3 a">
+				<!-- 上 -->
+			</div>
+			<div class="a4 a">
+				<!-- 下 -->
+			</div>
+			<div class="a5 a">
+				<!-- 左 -->
+			</div>
+			<div class="a6 a">
+				<!-- 右 -->
+			</div>
+			<div class="b1 b"></div>
+			<div class="b2 b"></div>
+			<div class="b3 b"></div>
+			<div class="b4 b"></div>
+			<div class="b5 b"></div>
+			<div class="b6 b"></div>
+		</div>
+	</body>
+</html>
