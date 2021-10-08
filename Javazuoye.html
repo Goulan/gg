@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#yicangkuan{
+				width: 100px;
+				height: 50px;
+				background-color:burlywood ;
+			}
+			#login{
+				display: none;
+				position: absolute;
+				left: 40%;
+				top: 30%;
+				width: 250px;
+				height: 200px;
+				border: 1px solid #888;
+				background-color: #def;
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+				font-size: 30px;
+			}
+			#login a{
+				position: absolute;
+				top: 0px;
+				left: 220px;
+			}
+			#fourth {
+			   width: 500px;
+			   height: 600px;
+			   border: 1px solid;
+			   padding: 0;
+			   position: relative;
+			  }
+			  #fourth ul {
+			   margin: 0;
+			   padding: 0;
+			   list-style: none;
+			   position: absolute;
+			   bottom: 0;
+			   left: 0;
+			  }
+			  #fourth li {
+			   float: left;
+			   margin-right: 20px;
+			  }
+			  #fourth li img {
+			   width: 100px;
+			   height: 100px;
+			  }
+			  #fourth li:hover {
+			   cursor: pointer;
+			  }
+			  #beijing{
+			     width: 230px;
+			     height: 150px;
+			     background-color: beige;
+			     color:black;
+			     margin: 30px auto;
+			     text-align: center;
+			     line-height: 50px;
+			     position: relative;
+			    }
+			    .asad{
+			     width: 300px;
+			     height: 46px;
+			     border-bottom: 1px solid black;
+			     position: relative;
+			    }
+			    #eye{
+			     width: 15px;
+			     position: absolute;
+			     top:90px;
+			     left: 210px;
+			     
+			    }
+		</style>
+	</head>
+	<body>
+		<h1>一</h1>
+		<p id='anniu'>按钮</p>
+		<div id="yicangkuan" style="display: none;">嘿嘿，我在这呢</div>
+		<h1>二</h1>
+		<a href="javascript:openlogin();" onclick="closelogin()">登录</a>
+		<div id="login">
+			<form action="" method="">
+				<p>用户账号：<input type="text" /></p>
+				<p>用户密码：<input type="password" /></p>
+				<input type="submit"  name="" value="确认提交"/>
+				<input type="reset" value="重填" />
+				<a href="javascript:closelogin();" onclick="closelogin()">×</a>
+			</form>
+		</div>
+		<h1>三</h1>
+		<div id="">
+			<form>
+				<input type="text" id="" value="在这里输入文字" onfocus="this.value=''"onblur="if(this.value==''){this.value='在这里输入文字'}"/>
+				<input type="submit" id="" name=""value="提交" />
+			</form>
+		</div>
+		<h1>四</h1>
+		<div id="fourth">
+		 <img src="jpg/1.jpg" width="100%" height="80%" class="d" >
+		 <ul>
+		  <li class="d1"><img src="jpg/1.jpg"></li>
+		  <li class="d2"><img src="jpg/2.jpg"></li>
+		  <li class="d3"><img src="jpg/3.jpg"></li>
+		  <li class="d4"><img src="jpg/4.jpg"></li>
+		 </ul>
+		</div> 
+		<h1>五</h1>
+		<div id="beijing">
+		   <h1>密码隐藏</h1>
+		   <input type="password" value="123456" id="asad">
+		   <label for=""><img src="jpg/eyenone.png" id='eye'>
+		   </label>
+		  </div>
+		<script >
+			(function(){
+				let niu=document.getElementById('anniu');
+				let kuan=document.getElementById('yicangkuan');
+				let timer=null;
+				kuan.onmouseover=niu.onmouseover=function(){
+					if(timer)clearTimeout(timer)
+					kuan.style.display='block';
+				}
+				kuan.onmouseout=niu.onmouseout=function(){
+					timer=setTimeout(function(){
+					kuan.style.display='none';
+					},400);
+				}
+			})();
+			function openlogin(){
+				document.getElementById('login').style.display='block';
+			};
+			function closelogin(){
+				document.getElementById('login').style.display='none';
+			};
+			const d1 = document.querySelector('.d1');
+			   const d2 = document.querySelector('.d2');
+			   const d3 = document.querySelector('.d3');
+			   const d4 = document.querySelector('.d4');
+			   const d = document.querySelector('.d');
+			   d1.onmouseover = function() {
+			    d.src = 'jpg/1.jpg';
+			   }
+			   d2.onmouseover = function() {
+			    d.src = 'jpg/2.jpg';
+			   }
+			   d3.onmouseover = function() {
+			    d.src = 'jpg/3.jpg';
+			   }
+			   d4.onmouseover = function() {
+			    d.src = 'jpg/4.jpg';
+			   }
+			   let asad = document.getElementById('asad');
+			     let img = document.getElementById('eye');
+			     let ye = 0;
+			     img.onclick=function(){
+			       if (ye==0){
+			        asad.type='text';
+			        eye.src="jpg/eyesee.png";
+			        ye=1;
+			        
+			       }else{
+			        asad.type='password';
+			        eye.src="jpg/eyenone.png";
+			        ye=0;
+			       }
+			      }
+		</script>
+	</body>
+</html>
