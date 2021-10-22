@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write('<h1>js 2.1</h1>');
+			document.write('<button id="button">a与b作比较</button>');
+			const button = document.getElementById('button');
+			   button.addEventListener('click', bijiao);
+			   function bijiao() {
+			    let a = Number(prompt('请输入a的值'));
+			    let b = Number(prompt('请输入b的值'));
+			if (a > b) {
+			     alert('a大于b');
+			    } else if (a < b) {
+			     alert('a小于b');
+			    } else {
+			     alert('a等于b');
+			    }
+			    console.log(a);
+			   }
+			document.write('<hr>');
+			document.write('<h1>js 2.2</h1>');
+			document.write('<button id="button2">判断a是否能被5整除</button>');
+			const button2 = document.getElementById('button2');
+			   button2.addEventListener('click', fz);
+			   function fz() {
+			    let aa = Number(prompt('请给a赋值'));
+			    if (aa % 5 == 0) {
+			     alert('可以被5整除且结果过为' + aa / 5 + '');
+			    } else {
+			     alert('不可以被5整除');
+			    }
+			   }
+			document.write('<hr>');
+			document.write('<h1>js 2.3</h1>');
+			document.write('100以内偶数：')
+			for(let o=0;o<=100;o++){
+				if(o%2==0){
+				document.write('  '+o);}
+			}
+			document.write('<hr>');
+			document.write('<h1>js 2.4</h1>');
+			document.write('100以内七的倍数：')
+			let q=0;
+			while(q<=100){
+				if(q%7==0){
+					document.write('  '+q);
+				}
+				q++;
+			}
+			document.write('<hr>');
+			document.write('<h1>js 2.5</h1>');
+			document.write('<button id="button3">a,b,c求最大值</button>');
+			   const button3 = document.getElementById('button3');
+			   button3.addEventListener('click', list);
+			   function list() {
+			    let aa = Number(prompt('请输入a的值'));
+			    let bb = Number(prompt('请输入b的值'));
+			    let cc = Number(prompt('请输入c的值'));
+			    if (aa > bb && aa > cc) {
+			     alert('a,b,c中 a 最大,a的值为：' + aa );
+			    } else if (bb > aa && bb > cc) {
+			     alert('a,b,c中 b 最大,b的值为：' + bb );
+			    } else if (cc > aa && cc > bb) {
+			    }
+			    alert('a,b,c中 c 最大,c的值为：' + cc );
+			   }
+			document.write('<hr>');
+			document.write('<h1>js 3.1</h1>');
+			document.write('偶 奇')
+			for(let o=0;o<=100;o++){
+				if(o%2==0){
+				document.write('<br>'+o);
+				}else{
+					document.write('&nbsp;&nbsp;'+o);
+					}
+			}
+			document.write('<hr>');
+			document.write('<h1>js 3.2</h1>');
+			document.write('<button id="button4">求数组的和</button>');
+			const button4 = document.getElementById('button4');
+			button4.addEventListener('click', max);
+			function max() {
+				let test = prompt('请输入数组');
+				let newshuzu = test.split(',');
+				console.log(newshuzu);
+				let summm = 0;
+				for (h = 0; h <= newshuzu.length - 1; h++) {
+					summm +=Number(newshuzu[h]);
+				}
+				document.write('输入的数组之和为'+summm+'');
+			}
+			document.write('<hr>');
+			document.write('<h1>作业三题</h1><br>');
+			document.write('<input type="text" id="input1"><br/>');
+			document.write('<input type="text" id="input2">');
+			document.write('<button id="button6">很牛逼的比较</button><br/>');
+			const button6 =document.getElementById('button6');
+			const input1 =document.getElementById('input1');
+			const input2 =document.getElementById('input2');
+			button6.addEventListener('click',dayijia);
+			function dayijia(){
+				if(isNaN(input1.value)||isNaN(input2.value)){
+					alert('请输入数字');
+				}else{if(input1.value>input2.value){
+					alert('a的数值大');
+				}
+				else if(input2.value>input1.value){
+					alert('b的数值大');
+				}
+				else{
+					alert('a,b值相等');
+				}
+				}
+			}
+		</script>
+	</body>
+</html>
